@@ -1,0 +1,18 @@
+ASSUMPTIONS ABOUT OUR CLASS DIAGRAM (VERY IMPORTANT)
+
+
+	1) GenerateAuthKey() creates OTP in the OTP authenticator class and QR code in the QR authenticator class.
+
+	2) Notify() in creditCardTransaction class stores a copy of the transaction log to save in the transaction history then notifies the client of the performed transaction.
+
+	3) Update() method refreshes and updates all fields related to the client and sends a notification to the client if any updates occur to any of the relevant fields.
+
+	4) Stores and Charities are stored as bank accounts with details such as name and location in the bank's database.
+
+	5) redeemPoints() in the creditCardManager class redeems points tied to a specific card.
+
+	6) Partners to the bank (places where a client can redeem points) can have bank accounts outside the bank, thus they are stored as bank accounts in the database to let the bank send them the equivalent money to the points spent by the client.
+
+	7) Voice recognition service asks for verification after each voice command to avoid potential mis-actions.
+
+	8) Once a client reports the theft of a card, the card is immediately blocked through the card anager in the system.
