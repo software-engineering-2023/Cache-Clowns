@@ -15,4 +15,4 @@ ASSUMPTIONS ABOUT OUR CLASS DIAGRAM (VERY IMPORTANT)
 
 	7) Voice recognition service asks for verification after each voice command to avoid potential mis-actions.
 
-	8) Once a client reports the theft of a card, the card is immediately blocked through the card anager in the system.
+	8) Once a client reports the theft of a card, the card is immediately blocked through the card manager in the system.
