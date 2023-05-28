@@ -47,6 +47,14 @@ https://templatemo.com/tm-574-mexant
         background-color: #e5f7f0;
         border-color: #d8f7eb;
     }
+    .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
   </style>
 
 <body>
@@ -113,7 +121,7 @@ https://templatemo.com/tm-574-mexant
     <div class="row mt-5">
         <div class="col-md-6 offset-md-3">
             <div class="box">
-                <div class="box-header bg-primary text-white">
+                <div class="box-header text-white">
                     <h4 class="mb-0">Notifications</h4>
                 </div>
                 <div class="box-body p-0">
@@ -127,12 +135,16 @@ https://templatemo.com/tm-574-mexant
                         </div>
                         <span class="ml-auto mb-auto">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="modal"
+                                    data-target="#notificationModal" data-title="Your transaction was successful"
+                                    data-details="You have successfully completed a transaction for $100.">
+                                    View Notification
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
+                                    <button class="dropdown-item" type="button"><i
+                                            class="fas fa-trash"></i> Delete</button>
+                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i>
+                                        Turn Off</button>
                                 </div>
                             </div>
                             <br>
@@ -149,36 +161,44 @@ https://templatemo.com/tm-574-mexant
                         </div>
                         <span class="ml-auto mb-auto">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="modal"
+                                    data-target="#notificationModal" data-title="Action required: Update your profile"
+                                    data-details="Please update your profile information to continue enjoying our services.">
+                                    View Notification
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
+                                    <button class="dropdown-item" type="button"><i
+                                            class="fas fa-trash"></i> Delete</button>
+                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i>
+                                        Turn Off</button>
                                 </div>
                             </div>
                             <br>
                             <div class="text-right text-muted pt-1">1 day ago</div>
                         </span>
                     </div>
-                </div>
-                <div class="box-body p-0">
                     <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="notification-icon bg-secondary text-white mr-3">
                             <i class="fas fa-credit-card"></i>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="text-truncate">Your credit card payment is due soon</div>
-                            <div class="small">Please remember to make your payment before the due date to avoid any penalties.</div>
+                            <div class="small">Please remember to make your payment before the due date to avoid
+                                any penalties.</div>
                         </div>
                         <span class="ml-auto mb-auto">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="modal"
+                                    data-target="#notificationModal"
+                                    data-title="Your credit card payment is due soon"
+                                    data-details="Please remember to make your payment before the due date to avoid any penalties.">
+                                    View Notification
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
+                                    <button class="dropdown-item" type="button"><i
+                                            class="fas fa-trash"></i> Delete</button>
+                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i>
+                                        Turn Off</button>
                                 </div>
                             </div>
                             <br>
@@ -195,12 +215,16 @@ https://templatemo.com/tm-574-mexant
                         </div>
                         <span class="ml-auto mb-auto">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="modal"
+                                    data-target="#notificationModal" data-title="Unauthorized login attempt"
+                                    data-details="An unauthorized login attempt was detected. Please take immediate action to secure your account.">
+                                    View Notification
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
+                                    <button class="dropdown-item" type="button"><i
+                                            class="fas fa-trash"></i> Delete</button>
+                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i>
+                                        Turn Off</button>
                                 </div>
                             </div>
                             <br>
@@ -214,6 +238,41 @@ https://templatemo.com/tm-574-mexant
 </div>
 
 
+    <!-- the notifs end here-->
+
+    <!-- Add the Bootstrap and Font Awesome JavaScript files to your HTML file -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript code to populate the modal with the clicked notification's title and details -->
+    <script>
+        $('#notificationModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var title = button.data('title');
+            var details = button.data('details');
+            var modal = $(this);
+            modal.find('.modal-title').text(title);
+            modal.find('.modal-body').text(details);
+        });
+    </script>
+
+    <!-- Modal for displaying notification details -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="notificationModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
   <footer>
     <div class="container">
