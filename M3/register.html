@@ -63,6 +63,15 @@
             margin-bottom: 10px;
         }
 
+        .form-group .optional {
+            display: none;
+        }
+
+        .form-group label.required::after {
+            content: '*';
+            color: red;
+        }
+
         button[type="submit"] {
             display: block;
             width: 100%;
@@ -115,30 +124,34 @@
                 <img src="assets/images/GFB_black.png" alt="Logo">
             </div>
             <h1 class="register-heading">Register</h1>
-            <div class = "scrollable">
+            <div class="scrollable">
                 <div class="form-group">
-                    <label for="ssn">SSN</label>
+                    <label for="ssn" class="required">SSN</label>
                     <input type="text" id="ssn" name="ssn" placeholder="Enter your SSN">
                 </div>
                 <div class="form-group">
-                    <label for="username">Username</label>
+                    <label for="username" class="required">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password" class="required">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password">
                 </div>
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name" class="required">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name">
                 </div>
                 <div class="form-group">
-                    <label for="address">Address</label>
+                    <label for="address" class="required">Address</label>
                     <input type="text" id="address" name="address" placeholder="Enter your address">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email" class="required">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group optional" id="bankAccountGroup">
+                    <label for="bankAccount">Bank Account (If exists)</label>
+                    <input type="text" id="bankAccount" name="bankAccount" placeholder="Enter your bank account">
                 </div>
             </div>
             <button type="submit">Register</button>
@@ -159,6 +172,12 @@
     <script src="assets/js/isotope.js"></script>
     <script src="assets/js/accordions.js"></script>
 
-    <!-- Template Mo 574 Mexant -->
+    <!-- Custom JavaScript -->
+    <script>
+        function toggleBankAccount() {
+            var bankAccountGroup = document.getElementById("bankAccountGroup");
+            bankAccountGroup.classList.toggle("optional");
+        }
+    </script>
 </body>
 </html>
