@@ -40,6 +40,11 @@
             width: 30%;
         }
 
+        .form-group label.required::after {
+            content: '*';
+            color: red;
+        }
+
         .form-group {
             margin-bottom: 10px;
         }
@@ -101,11 +106,11 @@
             </div>
             <h1 class="login-heading">Login</h1>
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username" class="required">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password" class="required">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
             <button type="submit">Login</button>
