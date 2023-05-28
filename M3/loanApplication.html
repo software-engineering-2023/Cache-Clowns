@@ -26,12 +26,18 @@
 
     <style>
         .loan-container {
+            background-image: url("assets/images/lr_background.jpg");
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .loan-heading {
@@ -52,6 +58,15 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        .loan-input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .loan-input-group .loan-input {
+            width: calc(50% - 10px);
         }
 
         .loan-input button {
@@ -131,45 +146,47 @@
 <!-- ***** Main Banner Area End ***** -->
 
 <div class="loan-container">
-  <div class="loan-heading">
-    <h4>Loan Application</h4>
+    <div class="loan-heading">
+      <h4>Loan Application</h4>
+    </div>
+    <form id="loan-application" action="" method="get">
+      <div class="loan-input-group">
+        <div class="loan-input">
+          <label for="loan-type">Loan Type</label>
+          <select name="loan-type" id="loan-type" required>
+            <option value="">Select Loan Type</option>
+            <option value="personal">Personal Loan</option>
+            <option value="car">Car Loan</option>
+            <option value="home">Home Loan</option>
+            <!-- Add more loan types here -->
+          </select>
+        </div>
+        <div class="loan-input">
+          <label for="interest-rate">Interest Rate</label>
+          <select name="interest-rate" id="interest-rate" required>
+            <option value="">Select Interest Rate</option>
+            <option value="3%">3%</option>
+            <option value="5%">5%</option>
+            <option value="7%">7%</option>
+            <!-- Add more interest rates here -->
+          </select>
+        </div>
+      </div>
+      <div class="loan-input">
+        <label for="repayment-period">Repayment Period</label>
+        <select name="repayment-period" id="repayment-period" required>
+          <option value="">Select Repayment Period</option>
+          <option value="1 year">1 Year</option>
+          <option value="3 years">3 Years</option>
+          <option value="5 years">5 Years</option>
+          <!-- Add more repayment periods here -->
+        </select>
+      </div>
+      <div class="loan-input">
+        <button type="submit" id="loan-submit" class="loan-button">Submit Application</button>
+      </div>
+    </form>
   </div>
-  <form id="loan-application" action="" method="get">
-    <div class="loan-input">
-      <label for="loan-type">Loan Type</label>
-      <select name="loan-type" id="loan-type" required>
-        <option value="">Select Loan Type</option>
-        <option value="personal">Personal Loan</option>
-        <option value="car">Car Loan</option>
-        <option value="home">Home Loan</option>
-        <!-- Add more loan types here -->
-      </select>
-    </div>
-    <div class="loan-input">
-      <label for="interest-rate">Interest Rate</label>
-      <select name="interest-rate" id="interest-rate" required>
-        <option value="">Select Interest Rate</option>
-        <option value="3%">3%</option>
-        <option value="5%">5%</option>
-        <option value="7%">7%</option>
-        <!-- Add more interest rates here -->
-      </select>
-    </div>
-    <div class="loan-input">
-      <label for="repayment-period">Repayment Period</label>
-      <select name="repayment-period" id="repayment-period" required>
-        <option value="">Select Repayment Period</option>
-        <option value="1 year">1 Year</option>
-        <option value="3 years">3 Years</option>
-        <option value="5 years">5 Years</option>
-        <!-- Add more repayment periods here -->
-      </select>
-    </div>
-    <div class="loan-input">
-      <button type="submit" id="loan-submit" class="loan-button">Submit Application</button>
-    </div>
-  </form>
-</div>
 
 
 
