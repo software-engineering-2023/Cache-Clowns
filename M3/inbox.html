@@ -139,10 +139,20 @@ https://templatemo.com/tm-574-mexant
                             <i class="fas fa-check"></i>
                         </div>
                         <div class="font-weight-bold mr-3">
-                            <div class="text-truncate">Your transaction was successful</div>
-                            <div class="small">You have successfully completed a transaction for $100.</div>
+                            <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
+                            <div class="small" id="details_of_notif">You have successfully completed a transaction for $100.</div>
                         </div>
                         <span class="ml-auto mb-auto">
+
+                            <!-- Button code here
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-light btn-sm rounded" data-toggle="modal"
+                                  data-target="#notificationModal" data-title="Your transaction was successful"
+                                  data-details="You have successfully completed a transaction for $100.">
+                                  View Notification
+                              </button>
+                            </div> -->
+
                             <div class="text-right text-muted pt-1">2 hours ago</div>
                         </span>
                     </div>
@@ -216,6 +226,42 @@ https://templatemo.com/tm-574-mexant
         </div>
     </div>
 </div>
+
+<!-- Modal for displaying notification details -->
+<!-- <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="notificationModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+  Add the Bootstrap JS script and jQuery script links to your HTML file 
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script>
+     $(document).ready(function () {
+         $('#notificationModal').on('show.bs.modal', function (event) {
+             var title = document.getElementById("title_of_notif").value;
+             var details = document.getElementById("details_of_notif").value;
+             var modal = $(this);
+             modal.find('.modal-title').text(title);
+             modal.find('.modal-body').text(details);
+         });
+     });
+ </script> -->
 
 
 
