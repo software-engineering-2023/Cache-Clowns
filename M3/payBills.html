@@ -29,55 +29,7 @@
     }
     </script>
 
-    <script>
-            $(function () {
-        var bindDatePicker = function() {
-          $(".date").datetimepicker({
-              format:'YYYY-MM-DD',
-            icons: {
-              time: "fa fa-clock-o",
-              date: "fa fa-calendar",
-              up: "fa fa-arrow-up",
-              down: "fa fa-arrow-down"
-            }
-          }).find('input:first').on("blur",function () {
-            // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
-            // update the format if it's yyyy-mm-dd
-            var date = parseDate($(this).val());
-
-            if (! isValidDate(date)) {
-              //create date based on momentjs (we have that)
-              date = moment().format('YYYY-MM-DD');
-            }
-
-            $(this).val(date);
-          });
-	}
    
-   var isValidDate = function(value, format) {
-		format = format || false;
-		// lets parse the date to the best of our knowledge
-		if (format) {
-			value = parseDate(value);
-		}
-
-		var timestamp = Date.parse(value);
-
-		return isNaN(timestamp) == false;
-   }
-   
-   var parseDate = function(value) {
-		var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
-		if (m)
-			value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
-
-		return value;
-   }
-   
-   bindDatePicker();
- });
-    </script>
-
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -449,92 +401,6 @@
                     </div>
                 </div>
 <br><br>
-                <input type="date" id="date">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-              <div>
-                <button class="credit-card-redeem-button text-white">Set Reminder</button>
-              </div>
-            
-            </div>
-              <div class="credit-card-input">
-                <div class="box-header text-white">
-                  <h4 class="mb-0">Create New Bill</h4>
-              </div>
-              <hr>
-              <br>
-
-                <label for="credit-card-select">Select Biller ID</label>
-                <div class="d-flex align-items-center">
-                  <i class="fas fa-tools credit-card-icon"></i>
-                  <select name="credit-card-select" id="credit-card-select" required>
-                    <option value="">Select Biller ID</option>
-                    <option value="card1">Al-Kabeda for electricity (136255)</option>
-                    <option value="card2">Al-Kabeda for water (377264)</option>
-                    <option value="card2">Gas CO. (764723)</option>
-                    <option value="card2">Telecom EG (477265)</option>
-                    <!-- Add more credit card options here -->
-                  </select>
-                </div>
-                  <br>
-                  <label for="credit-card-select">Select Bill Type</label>
-                <div class="d-flex align-items-center">
-                  <i class="fas fa-pager credit-card-icon"></i>
-                  <select name="credit-card-select" id="credit-card-select" required>
-                    <option value="">Select Type</option>
-                    <option value="card1">Electricity Bill</option>
-                    <option value="card2">Water Bill</option>
-                    <option value="card2">Gas Bill</option>
-                    <option value="card2">Telephone Bill</option>
-                    <!-- Add more credit card options here -->
-                  </select>
-                </div>
-              </div>
-
-              <div class="text-input">
-                <br>
-              <label for="credit-card-select">Payer ID</label>
-                <div class="textarea-container">
-                  <textarea class="textarea" maxlength="10" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
-                  <div class="character-count">0/10</div>
-                </div>
-                <br>
-              </div>
-
-              
-              <div class="text-input">
-                <br>
-              <label for="credit-card-select">Payer Address</label>
-                <div class="textarea-container">
-                  <textarea class="textarea" maxlength="1000" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
-                  <div class="character-count">0/1000</div>
-                </div>
-                <br>
-              </div>
-
-              <div class="text-input">
-                <br>
-              <label for="credit-card-select">Bill Amount</label>
-                <div class="textarea-container">
-                  <textarea class="textarea" maxlength="30" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
-                  <div class="character-count">EGP</div>
-                </div>
-                <br>
-              </div>
-
-              <div class="credit-card-points">
-                <button class="credit-card-redeem-button text-white">Create bill</button>
-              </div>
-          
-
               <div class="loan-input-group">
           
               </div>
@@ -581,6 +447,13 @@
                 <input type="text" id="card-cvv" placeholder="CVV" required>
               </div>
               <br>
+
+              <div class="d-flex align-items-center">
+                <i class="fas fa-money-bill-wave credit-card-icon"></i>
+                <input type="text" class="date" placeholder="Amount" required>
+              </div>
+              <br>
+
               <div class="loan-input-group">
                 <div class="loan-input">
                   <button class="loan-button text-white" style="background-color: green;">Pay Bill Fully</button>
