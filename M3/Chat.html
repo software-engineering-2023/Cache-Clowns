@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.chat-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.message .text {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.message .text p {
+  margin: 0;
+}
+
+.message .text.sent {
+  background-color: #DCF8C6;
+  align-self: flex-end;
+}
+
+.message .text.received {
+  background-color: #E8E8E8;
+  align-self: flex-start;
+}
+
+.message .time {
+  font-size: 12px;
+  color: #888;
+}
+
+.align-left {
+  align-self: flex-start;
+}
+
+.align-right {
+  align-self: flex-end;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="chat-container">
+    <div class="title">Ticket 4028293</div>
+    <div class="chatbox">
+      <div class="message align-left">
+        <img class="profile-pic" src="assets/images/User.png" alt="User 1 Profile Picture">
+        <div class="text sent">
+          <p>Hello there! How are you?</p>
+          <span class="time">12:30 PM</span>
+        </div>
+      </div>
+      <br>
+      <div class="message align-right">
+        <div class="text received">
+          <p>Hi! I'm doing great, thanks for asking.</p>
+          <span class="time">12:35 PM</span>
+        </div>
+        <img class="profile-pic" src="assets/images/User 2.png" alt="User 2 Profile Picture">
+      </div>
+      <br>
+      <div class="message align-left">
+        <img class="profile-pic" src="assets/images/User.png" alt="User 1 Profile Picture">
+        <div class="text sent">
+          <p>That's good to hear! What have you been up to lately?</p>
+          <span class="time">12:40 PM</span>
+        </div>
+      </div>
+      <br>
+      <div class="message align-right">
+        <div class="text received">
+          <p>I've been working on a new project.</p>
+          <span class="time">12:45 PM</span>
+        </div>
+        <img class="profile-pic" src="assets/images/User 2.png" alt="User 2 Profile Picture">
+      </div>
+      <!-- Add more messages here -->
+    </div>
+  </div>
+</div>
+</body>
+</html>
