@@ -113,12 +113,33 @@
                 <label for="password" class="required">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
+
             <button type="submit">Login</button>
             <div class="register-button">
                 <a href="register.html">Create an account</a>
             </div>
         </form>
     </div>
+
+    <script>
+        // Get the form element
+        const loginForm = document.getElementById("loginForm");
+    
+        // Add event listener for form submission
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Retrieve the input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+    
+            // Use the input values as needed
+            // ...
+    
+            // Redirect to another page
+            window.location.href = "index.html";
+        });
+    </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

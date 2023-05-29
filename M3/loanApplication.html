@@ -144,45 +144,59 @@
 <!-- ***** Main Banner Area End ***** -->
 
 <div class="loan-container">
-    
-    <form id="loan-application" action="" method="get">
-      <div class="loan-input-group">
-        <div class="loan-input">
-          <label for="loan-type">Loan Type</label>
-          <select name="loan-type" id="loan-type" required>
-            <option value="">Select Loan Type</option>
-            <option value="personal">Personal Loan</option>
-            <option value="car">Car Loan</option>
-            <option value="home">Home Loan</option>
-            <!-- Add more loan types here -->
-          </select>
-        </div>
-        <div class="loan-input">
-          <label for="interest-rate">Interest Rate</label>
-          <select name="interest-rate" id="interest-rate" required>
-            <option value="">Select Interest Rate</option>
-            <option value="3%">3%</option>
-            <option value="5%">5%</option>
-            <option value="7%">7%</option>
-            <!-- Add more interest rates here -->
-          </select>
-        </div>
-      </div>
+  <form id="loan-application" action="" method="get" onsubmit="return validateForm()">
+    <div class="loan-input-group">
       <div class="loan-input">
-        <label for="repayment-period">Repayment Period</label>
-        <select name="repayment-period" id="repayment-period" required>
-          <option value="">Select Repayment Period</option>
-          <option value="1 year">1 Year</option>
-          <option value="3 years">3 Years</option>
-          <option value="5 years">5 Years</option>
-          <!-- Add more repayment periods here -->
+        <label for="loan-type">Loan Type</label>
+        <select name="loan-type" id="loan-type" required>
+          <option value="">Select Loan Type</option>
+          <option value="personal">Personal Loan</option>
+          <option value="car">Car Loan</option>
+          <!-- Add more loan types here -->
         </select>
       </div>
       <div class="loan-input">
-        <button type="submit" id="loan-submit" class="loan-button">Submit Application</button>
+        <label for="interest-rate">Interest Rate</label>
+        <select name="interest-rate" id="interest-rate" required>
+          <option value="">Select Interest Rate</option>
+          <option value="3%">3%</option>
+          <option value="5%">5%</option>
+          <option value="7%">7%</option>
+          <!-- Add more interest rates here -->
+        </select>
       </div>
-    </form>
-  </div>
+    </div>
+    <div class="loan-input">
+      <label for="repayment-period">Repayment Period</label>
+      <select name="repayment-period" id="repayment-period" required>
+        <option value="">Select Repayment Period</option>
+        <option value="1 year">1 Year</option>
+        <option value="3 years">3 Years</option>
+        <option value="5 years">5 Years</option>
+        <!-- Add more repayment periods here -->
+      </select>
+    </div>
+    <div class="loan-input" >
+      <button type="submit" id="loan-submit" class="loan-button">Submit Application</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    var loanType = document.getElementById("loan-type").value;
+    var interestRate = document.getElementById("interest-rate").value;
+    var repaymentPeriod = document.getElementById("repayment-period").value;
+    
+    if (loanType === "" || interestRate === "" || repaymentPeriod === "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+    
+    return confirm("Submitted");
+  }
+</script>
+
 
 
 
