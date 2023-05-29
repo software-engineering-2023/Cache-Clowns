@@ -131,12 +131,21 @@
   <div class="credit-card-container">
     <form id="credit-card-application" action="" method="get" onsubmit="return validateForm()">
       <div class="credit-card-input">
-        <label for="spending-limit">Spending Limit</label>
+        <label for="spending-limit">Account Number</label>
+        <select name="spending-limit" id="spending-limit" required>
+          <option value="">Select Account Number</option>
+          <option value="12345678901234">1005678901234</option>
+          <option value="1090678901234">1090678901234</option>
+          <!-- Add more spending limits here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <label for="spending-limit">Monthly Spending Limit</label>
         <select name="spending-limit" id="spending-limit" required>
           <option value="">Select Spending Limit</option>
-          <option value="1000">$1000</option>
-          <option value="2000">$2000</option>
-          <option value="5000">$5000</option>
+          <option value="1000">EGP 10,000</option>
+          <option value="2000">EGP 50,000</option>
+          <option value="5000">EGP 200,000 </option>
           <!-- Add more spending limits here -->
         </select>
       </div>
@@ -154,9 +163,9 @@
         <label for="repayment-period">Repayment Period</label>
         <select name="repayment-period" id="repayment-period" required>
           <option value="">Select Repayment Period</option>
-          <option value="1 year">1 Year</option>
-          <option value="2 years">2 Years</option>
-          <option value="3 years">3 Years</option>
+          <option value="1 year">1 Month</option>
+          <option value="2 years">2 Months</option>
+          <option value="3 years">3 Months</option>
           <!-- Add more repayment periods here -->
         </select>
       </div>
