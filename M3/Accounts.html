@@ -85,9 +85,6 @@
     /* Add styles for the redeem button */
     background-color: green;
     border-radius: 4px;
-    padding: 10px 20px;
-    font-size: medium;
-    border: none;
   }
 
   .credit-card-history {
@@ -238,7 +235,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="header-text">
-          <h2>Credit Cards</h2>
+          <h2>Accounts and balances</h2>
           <div class="div-dec"></div>
         </div>
       </div>
@@ -255,34 +252,26 @@
         <div class="container row">
               <div class="col-lg-6">
               <div class="credit-card-input">
-                <label for="credit-card-select">Select Credit Card</label>
+                <h4 class="mb-0">Select Account</h4>
+                <br>
                 <div class="d-flex align-items-center">
-                  <i class="fas fa-credit-card credit-card-icon"></i>
+                  <i class="fas fa-money-bill-wave credit-card-icon"></i>
                   <select name="credit-card-select" id="credit-card-select" required>
-                    <option value="">Select Credit Card</option>
-                    <option value="card1">5508697905133962, 7/2030</option>
-                    <option value="card2">4024007157561266, 10/2028</option>
+                    <option value="">Select account</option>
+                    <option value="card1">102999188301</option>
+                    <option value="card2">177299100928</option>
+                    <option value="card2">774661921772</option>
                     <!-- Add more credit card options here -->
                   </select>
                 </div>
-              </div>
-              <div class="credit-card-points">
-                <span id="credit-card-points">Points: 420</span>
-                <button id="redeem-points" class="credit-card-redeem-button text-white">Redeem Points</button>
               </div>
           
 
               <div class="loan-input-group">
                 <div class="freeze-input">
-                  <button type="submit" id="loan-submit" class="freeze-input" onclick="submitFreeze()">Freeze</button>
+                  
+                  <h style="font-size: 60px">+12,000      EGP</h>
                 </div>
-                <div class="freeze-input">
-                  <button type="submit"  id="loan-submit" class="freeze-input" onclick="submitUnfreeze()">Unfreeze</button>
-                </div>
-                <br>
-                <div class="freeze-input" >
-                  <button type="submit" id="loan-submit" style="background-color: red;" class="loan-button" onclick="submitTheft()">Report Theft</button>
-          </div>
               </div>
 
           </div>
@@ -300,7 +289,7 @@
                             <i class="fas fa-check"></i>
                           </div>
                           <div class="font-weight-bold mr-3">
-                            <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
+                            <div class="text-truncate align-left" id="title_of_notif">Your transaction was successful</div>
                             <div class="small" id="details_of_notif">You have successfully completed a transaction for $100.</div>
                           </div>
                           <span class="ml-auto mb-auto">
@@ -313,13 +302,27 @@
                               <i class="fas fa-check"></i>
                             </div>
                             <div class="font-weight-bold mr-3">
-                              <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
-                              <div class="small" id="details_of_notif">You have successfully completed a transaction for $200.</div>
+                              <div class="mb-2">Your transaction was successful</div>
+                              <div class="small">You have successfully completed a transaction for $200.</div>
                             </div>
                             <span class="ml-auto mb-auto">
                               <div class="text-right text-muted pt-1">3 days ago</div>
                             </span>
                           </div>
+
+                          <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                            <div class="notification-icon bg-warning text-white mr-3">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="font-weight-bold mr-3">
+                                <div class="mb-2" style ="align-self: flex-start;">Transaction failed</div>
+                                <div class="small">Please check with vendor.</div>
+                            </div>
+                            <span class="ml-auto mb-auto">
+                                <div class="text-right text-muted pt-1">4 day ago</div>
+                            </span>
+                          </div>
+                          
                     </div>
                 </div>
             
