@@ -39,34 +39,24 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .reward-card:hover {
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
         }
 
         .reward-icon {
             font-size: 48px;
             margin-bottom: 10px;
-            color: #333;
         }
 
         .reward-title {
             font-weight: bold;
             margin-bottom: 10px;
-            color: #333;
         }
 
         .reward-description {
             margin-bottom: 10px;
-            color: #777;
         }
 
         .reward-cost {
             font-size: 18px;
-            color: #555;
         }
     </style>
 </head>
@@ -126,7 +116,7 @@
                     <i class="fas fa-gift reward-icon"></i>
                     <h5 class="reward-title">Samsung Galaxy S23 Ultra</h5>
                     <p class="reward-description">Win a free Samsung Galaxy S23 Ultra or choose to gift it to a special person!</p>
-                    <p class="reward-cost">Cost: 100,000 points</p>
+                    <p class="reward-cost">Cost: 100000 points</p>
                     <a href="#" class="btn btn-primary">Redeem</a>
                 </div>
             </div>
@@ -144,7 +134,7 @@
                     <i class="fas fa-plane reward-icon"></i>
                     <h5 class="reward-title">Plane Ticket to Zimbabwe</h5>
                     <p class="reward-description">Enjoy an all-expenses-paid trip to the fabulous African destination for two people</p>
-                    <p class="reward-cost">Cost: 3,000,000 points</p>
+                    <p class="reward-cost">Cost: 3000000000 points</p>
                     <a href="#" class="btn btn-primary">Redeem</a>
                 </div>
             </div>
