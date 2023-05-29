@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>GFB Bank</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+  <style>
+    .credit-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .credit-card-heading {
+    margin-bottom: 30px;
+  }
+
+  .credit-card-input {
+    margin-bottom: 20px;
+  }
+
+  .credit-card-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .credit-card-input select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .credit-card-input button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .credit-card-input button:hover {
+    background-color: darkorange;
+  }
+  .credit-card-icon {
+    /* Add styles for the credit card icon */
+    font-size: 48px;
+    margin-bottom: 0px;
+    margin-right:10px
+  }
+
+  .credit-card-points {
+    /* Add styles for the points section */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .credit-card-redeem-button {
+    /* Add styles for the redeem button */
+    background-color: green;
+  }
+
+  .credit-card-history {
+    /* Add styles for the transaction history section */
+    margin-top: 20px;
+  }
+
+  .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+  .credit-card-history .box-body {
+    /* Add styles for the transaction history box */
+    padding: 0;
+  }
+
+  .credit-card-history .osahan-post-header {
+    /* Add styles for each transaction history item */
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .dropdown-list-image {
+        position: relative;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .dropdown-list-image img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .btn-light {
+        color: #2cdd9b;
+        background-color: #e5f7f0;
+        border-color: #d8f7eb;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/GFB_white.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+
+                      <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#services">Services</a></li>
+                        <li class="scroll-to-section"><a href="#aboutus">About</a></li>
+                        <li><a href="login.html">Report theft</a></li> 
+
+                        <!-- old
+                        <li class="scroll-to-section"><a href="index.html">Home</a></li>
+                        <li class="scroll-to-section"><a href="index.html">Services</a></li>
+                        <li class="scroll-to-section"><a href="index.html">About</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="our-services.html">Our Services</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="index.html">Testimonials</a></li>
+                        <li><a href="contact-us.html">Contact Support</a></li> -->
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header-text">
+          <h2>Credit Cards</h2>
+          <div class="div-dec"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ***** Main Banner Area End ***** -->
+
+  <div class="credit-card-container">
+    <div class="credit-card-input">
+      <label for="credit-card-select">Select Credit Card</label>
+      <div class="d-flex align-items-center">
+        <i class="fas fa-credit-card credit-card-icon"></i>
+        <select name="credit-card-select" id="credit-card-select" required>
+          <option value="">Select Credit Card</option>
+          <option value="card1">Card 1</option>
+          <option value="card2">Card 2</option>
+          <!-- Add more credit card options here -->
+        </select>
+      </div>
+    </div>
+    <div class="credit-card-points">
+      <span id="credit-card-points">Points: 0</span>
+      <button id="redeem-points" class="credit-card-redeem-button">Redeem Points</button>
+    </div>
+    <div class="credit-card-history">
+      <div class="box-body p-0">
+        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+          <div class="notification-icon bg-success text-white mr-3">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="font-weight-bold mr-3">
+            <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
+            <div class="small" id="details_of_notif">You have successfully completed a transaction for $100.</div>
+          </div>
+          <span class="ml-auto mb-auto">
+            <div class="text-right text-muted pt-1">2 hours ago</div>
+          </span>
+        </div>
+        <!-- Add more transaction history items here -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 German Funding Bank, Ltd. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript files and additional scripts remain the same -->
+</body>
+</html>
