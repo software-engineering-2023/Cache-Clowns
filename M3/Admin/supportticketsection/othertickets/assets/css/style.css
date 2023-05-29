@@ -553,8 +553,8 @@ section {
   transition: all 0.5s;
   min-width: 20vw;
   max-width: 20vw;
-  min-height: 147vh;
-  max-height: 147vh;
+  min-height: 170vh;
+  max-height: 170vh;
   background: transparent;
 }
 
