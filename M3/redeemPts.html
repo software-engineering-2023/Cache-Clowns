@@ -118,7 +118,7 @@
 <section class="main-content">
     <div class="container">
         <div class="points-container">
-            <h4>Your Points: <span id="points">500</span></h4>
+            <h4>Your Points: <span id="points">420</span></h4>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -127,7 +127,7 @@
                     <h5 class="reward-title">Samsung Galaxy S23 Ultra</h5>
                     <p class="reward-description">Win a free Samsung Galaxy S23 Ultra or choose to gift it to a special person!</p>
                     <p class="reward-cost">Cost: 100,000 points</p>
-                    <a href="#" class="btn btn-primary">Redeem</a>
+                    <a href="#" class="btn btn-primary" onclick="rejectRedeem()">Redeem</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -136,7 +136,7 @@
                     <h5 class="reward-title">1 Year Anghami Plus Subscription</h5>
                     <p class="reward-description">Enjoy a free one-year membership on the leading music streaming service</p>
                     <p class="reward-cost">Cost: 200 points</p>
-                    <a href="#" class="btn btn-primary">Redeem</a>
+                    <a href="#" class="btn btn-primary" onclick="confirmRedeem()">Redeem</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -145,7 +145,7 @@
                     <h5 class="reward-title">Plane Ticket to Zimbabwe</h5>
                     <p class="reward-description">Enjoy an all-expenses-paid trip to the fabulous African destination for two people</p>
                     <p class="reward-cost">Cost: 3,000,000 points</p>
-                    <a href="#" class="btn btn-primary">Redeem</a>
+                    <a href="#" class="btn btn-primary" onclick="rejectRedeem()">Redeem</a>
                 </div>
             </div>
         </div>
@@ -153,6 +153,17 @@
 </section>
 <br>
 <!-- ***** Main Content Area End ***** -->
+
+<script>
+    //a function to confirm award redeemed
+    function confirmRedeem() {
+        return alert("Reward redeemed successfully!");
+    }
+
+    function rejectRedeem() {
+        return alert("Not enough points to redeem this reward!");
+    }
+</script>
 
 <footer>
     <div class="container">
