@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Mexant Template - Contact page</title>
+    <title>GFB Bank</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <!--
 
 TemplateMo 574 Mexant
@@ -47,6 +49,14 @@ https://templatemo.com/tm-574-mexant
         background-color: #e5f7f0;
         border-color: #d8f7eb;
     }
+    .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
   </style>
 
 <body>
@@ -65,6 +75,13 @@ https://templatemo.com/tm-574-mexant
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
+
+                        <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="#services">Services</a></li>
+                          <li class="scroll-to-section"><a href="#aboutus">About</a></li>
+                          <li><a href="login.html">Sign in</a></li> 
+
+                          <!-- old
                           <li class="scroll-to-section"><a href="index.html">Home</a></li>
                           <li class="scroll-to-section"><a href="index.html">Services</a></li>
                           <li class="scroll-to-section"><a href="index.html">About</a></li>
@@ -77,7 +94,7 @@ https://templatemo.com/tm-574-mexant
                               </ul>
                           </li>
                           <li class="scroll-to-section"><a href="index.html">Testimonials</a></li>
-                          <li><a href="contact-us.html">Contact Support</a></li> 
+                          <li><a href="contact-us.html">Contact Support</a></li> -->
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
@@ -113,7 +130,7 @@ https://templatemo.com/tm-574-mexant
     <div class="row mt-5">
         <div class="col-md-6 offset-md-3">
             <div class="box">
-                <div class="box-header bg-primary text-white">
+                <div class="box-header text-white">
                     <h4 class="mb-0">Notifications</h4>
                 </div>
                 <div class="box-body p-0">
@@ -126,86 +143,73 @@ https://templatemo.com/tm-574-mexant
                             <div class="small">You have successfully completed a transaction for $100.</div>
                         </div>
                         <span class="ml-auto mb-auto">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
-                                </div>
-                            </div>
-                            <br>
                             <div class="text-right text-muted pt-1">2 hours ago</div>
                         </span>
                     </div>
-                    <div class="p-3 d-flex align-items-center osahan-post-header">
+                    <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="notification-icon bg-warning text-white mr-3">
                             <i class="fas fa-exclamation-circle"></i>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="mb-2">Action required: Update your profile</div>
-                            <button type="button" class="btn btn-outline-warning btn-sm">Update Now</button>
                         </div>
                         <span class="ml-auto mb-auto">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
-                                </div>
-                            </div>
-                            <br>
                             <div class="text-right text-muted pt-1">1 day ago</div>
                         </span>
                     </div>
-                </div>
-                <div class="box-body p-0">
                     <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="notification-icon bg-secondary text-white mr-3">
                             <i class="fas fa-credit-card"></i>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="text-truncate">Your credit card payment is due soon</div>
-                            <div class="small">Please remember to make your payment before the due date to avoid any penalties.</div>
+                            <div class="small">Please remember to make your payment before the due date to avoid
+                                any penalties.</div>
                         </div>
                         <span class="ml-auto mb-auto">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
-                                </div>
-                            </div>
-                            <br>
+                            
                             <div class="text-right text-muted pt-1">5 days ago</div>
                         </span>
+                        
                     </div>
-                    <div class="p-3 d-flex align-items-center osahan-post-header">
+                    <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="notification-icon bg-danger text-white mr-3">
                             <i class="fas fa-exclamation-triangle"></i>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="mb-2">Unauthorized login attempt</div>
-                            <button type="button" class="btn btn-outline-danger btn-sm">Secure Your Account</button>
                         </div>
                         <span class="ml-auto mb-auto">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><i class="fas fa-trash"></i> Delete</button>
-                                    <button class="dropdown-item" type="button"><i class="fas fa-times"></i> Turn Off</button>
-                                </div>
-                            </div>
-                            <br>
+                            
                             <div class="text-right text-muted pt-1">1 week ago</div>
                         </span>
+                    </div>
+
+                    <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                        <div class="notification-icon bg-info text-white mr-3">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="font-weight-bold mr-3">
+                            <div class="text-truncate">New feature announcement</div>
+                            <div class="small">We have added exciting new features to enhance your experience.</div>
+                        </div>
+                        <span class="ml-auto mb-auto">
+                            
+                        </span>
+                        <div class="date-time text-right text-muted pt-1">1 week ago</div>
+                    </div>
+                    <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                        <div class="notification-icon bg-primary text-white mr-3">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="font-weight-bold mr-3">
+                            <div class="text-truncate">Congratulations! You've earned a reward</div>
+                            <div class="small">You have qualified for a special reward for your loyalty.</div>
+                        </div>
+                        <span class="ml-auto mb-auto">
+                            
+                        </span>
+                        <div class="date-time text-right text-muted pt-1">2 weeks ago</div>
                     </div>
                 </div>
             </div>
@@ -215,13 +219,18 @@ https://templatemo.com/tm-574-mexant
 
 
 
+
+
+
+
+
+
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 Mexant Co., Ltd. All Rights Reserved. 
-          
-          <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+          <p>Copyright © 2023 German Funding Bank, Ltd. All Rights Reserved. 
+        
         </div>
       </div>
     </div>
