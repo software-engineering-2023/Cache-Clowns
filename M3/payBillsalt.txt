@@ -277,69 +277,17 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo" style="text-align: left;">
-                        <img src="assets/images/GFB_whiten.png" alt="">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/GFB_white.png" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
 
-                    
-                      <li class="has-sub">
-                        <a href="javascript:void(0)" >Dashboard</a>
-                        <ul class="sub-menu">
-                            <li><a href="dashboard.html">My Summary</a></li>
-                            <li><a href="inbox.html">Inbox</a></li>
-
-                        </ul>
-                      </li>
-                      <li class="has-sub">
-                        <a href="javascript:void(0)">Accounts</a>
-                        <ul class="sub-menu">
-                          <li><a href="Accounts.html">My Accounts</a></li>
-                            <li><a href="accountApp.html">Account Application</a></li>
-                          
-
-                        </ul>
-                      </li>
-                      <li class="has-sub">
-                        <a href="javascript:void(0)">Credit Cards</a>
-                        <ul class="sub-menu">
-                            <li><a href="cards.html">My Cards</a></li>
-                            <li><a href="creditCardApplication.html">Card Applications</a></li>
-
-                        </ul>
-                      </li>
-                      <li class="has-sub">
-                        <a href="javascript:void(0)">Loans</a>
-                        <ul class="sub-menu">
-                            <li><a href="loanHistory.html">My Loans</a></li>
-                            <li><a href="loanApplication.html">Loan Applications</a></li>
-
-                        </ul>
-                      </li>
-                        <li class="has-sub">
-                          <a href="javascript:void(0)">Support</a>
-                          <ul class="sub-menu">
-                              <li><a href="TicketHistory.html">My Tickets</a></li>
-                              <li><a href="OpenTicket.html">Open a Ticket</a></li>
-  
-                          </ul>
-                        </li>
-            
-                        <li class="has-sub">
-                          <a href="javascript:void(0)" class="active">Payments & Services</a>
-                          <ul class="sub-menu">
-                            <li><a href="banktransfer.html">Transfers</a></li>
-                              <li><a href="BillsTemplate.html">My Bills</a></li>
-                              <li><a href="payBills.html">Pay Bills</a></li>
-                            
-  
-                          </ul>
-                        </li>
-                        <li><a href="TransactionHistory.html">Transactions</a></li>
-                    
-                        <li><a href="login.html">Log Out</a></li> 
+                      <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#services">Services</a></li>
+                        <li class="scroll-to-section"><a href="#aboutus">About</a></li>
+                        <li><a href="login.html">Sign In</a></li> 
 
                         <!-- old
                         <li class="scroll-to-section"><a href="index.html">Home</a></li>
@@ -386,88 +334,10 @@
   <div class="container text-center">
 
         <div class="container row">
-            <div class="box-container credit-card-history col-6" style="width: 50vw;">
-                <div class="box">
-                    <div class="box-header text-white">
-                        <h4 class="mb-0">Transaction History</h4>
-                    </div>
-                    <hr>
-                    <br>
-                    <div class="box-body p-0">
-                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
-                          <div class="notification-icon bg-secondary text-white mr-3">
-                            <i></i>
-                          </div>
-                          <div class="font-weight-bold mr-3">
-                            <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
-                            <div class="small" id="details_of_notif">Payer ID: 8199937422 | 310 EGP</div>
-                          </div>
-                        </div>
-
-                        <div class="p-3 d-flex align-items-center bg-primary border-bottom osahan-post-header">
-                            <div class="notification-icon bg-success text-white mr-3">
-                              <i class="fas fa-check"></i>
-                            </div>
-                            <div class="font-weight-bold mr-3">
-                              <div class="text-truncate" id="title_of_notif">Gas CO. (764723)</div>
-                              <div class="small" id="details_of_notif">Payer ID: 8199937422 | 500 EGP</div>
-                            </div>
-                          </div>
-
-                          <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
-                            <div class="notification-icon bg-secondary text-white mr-3">
-                              <i></i>
-                            </div>
-                            <div class="font-weight-bold mr-3">
-                              <div class="text-truncate" id="title_of_notif">Telecom EG (477265)</div>
-                              <div class="small" id="details_of_notif">Payer ID: 8199937422 | 790 EGP</div>
-                            </div>
-                          </div>
-  
-
-                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
-                          <div class="notification-icon bg-secondary text-white mr-3">
-                            <i></i>
-                          </div>
-                          <div class="font-weight-bold mr-3">
-                            <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
-                            <div class="small" id="details_of_notif">Payer ID: 784668754 |210 EGP</div>
-                          </div>
-                        </div>
-
-
-                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
-                          <div class="notification-icon bg-secondary text-white mr-3">
-                            <i></i>
-                          </div>
-                          <div class="font-weight-bold mr-3">
-                            <div class="text-truncate" id="title_of_notif">Other (7478762)</div>
-                            <div class="small" id="details_of_notif">Payer ID: 847776635 | 872 EGP</div>
-                          </div>
-                        </div>
-
-                    </div>
-                </div>
-<br><br>
-                <input type="date" id="date">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-              <div>
-                <button class="credit-card-redeem-button text-white">Set Reminder</button>
-              </div>
-            
-            </div>
+              <div class="box-container col">
               <div class="credit-card-input">
                 <div class="box-header text-white">
-                  <h4 class="mb-0">Create New Bill</h4>
+                  <h4 class="mb-0">Create new bill template</h4>
               </div>
               <hr>
               <br>
@@ -531,7 +401,7 @@
               </div>
 
               <div class="credit-card-points">
-                <button class="credit-card-redeem-button text-white">Create bill</button>
+                <button class="credit-card-redeem-button text-white">Save Template</button>
               </div>
           
 
@@ -540,57 +410,7 @@
               </div>
 
           </div>
-          <div class="col empty-seperator"></div>
-
-        <!-- the other col here-->
-        <div class="box-container col">
-            <div class="credit-card-input">
-              <div class="box-header text-white">
-                <h4 class="mb-0">Pay Bill</h4>
-              </div>
-              <hr>
-              <br>
-          
-              <label for="bill-biller">Select Biller</label>
-              <div class="d-flex align-items-center">
-                <i class="fas fa-tools credit-card-icon"></i>
-                <select name="bill-biller" id="bill-biller" required>
-                  <option value="">Select Biller</option>
-                  <option value="biller1">Al-Kabeda for electricity (136255)</option>
-                  <option value="biller2">Al-Kabeda for water (377264)</option>
-                  <option value="biller3">Gas CO. (764723)</option>
-                  <option value="biller4">Telecom EG (477265)</option>
-                  <!-- Add more biller options here -->
-                </select>
-              </div>
-              <br>
-              <label for="card-details">Card Details</label>
-              <div class="d-flex align-items-center">
-                <i class="fas fa-credit-card credit-card-icon"></i>
-                <input type="text" id="card-details" placeholder="Card Number" required>
-              </div>
-              <br>
-              <div class="d-flex align-items-center">
-                <i class="fas fa-calendar credit-card-icon"></i>
-                <input type="text" class="date" placeholder="Expiration Date" required>
-              </div>
-              <br>
-              
-              <div class="d-flex align-items-center">
-                <i class="fas fa-lock credit-card-icon"></i>
-                <input type="text" id="card-cvv" placeholder="CVV" required>
-              </div>
-              <br>
-              <div class="loan-input-group">
-                <div class="loan-input">
-                  <button class="loan-button text-white" style="background-color: green;">Pay Bill Fully</button>
-                </div>
-                <div class="loan-input">
-                  <button class="loan-button text-white " style="background-color: orange;">Pay Bill Partially</button>
-                </div>
-              </div>
-            </div>
-          
+          <div class="col empty-seperator">
 
           
           </div>
