@@ -9,6 +9,26 @@
 
   <title>GFB Bank</title>
 
+  <script>
+    function updateCharacterCount(textarea) {
+      const characterCount = textarea.value.length;
+      const characterCountElement = textarea.nextElementSibling;
+      characterCountElement.textContent = characterCount + "/1000";
+    }
+    
+    function submitForm() {
+      const issue = document.getElementById("issue").value;
+      const problem = document.getElementById("problem").value;
+      
+      if (issue && problem) {
+        return confirm("Submitted");
+      } else {
+        // Handle the case when not all fields are filled
+        alert("Please fill in all fields");
+      }
+    }
+    </script>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -184,6 +204,19 @@
           width: 20%;
         }
 
+        .box-container {
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .empty-seperator{
+          height: 100px;
+          width: 30px;
+
+        }
+
+
   </style>
 </head>
 
@@ -238,7 +271,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="header-text">
-          <h2>Credit Cards</h2>
+          <h2>Bills and Utilities</h2>
           <div class="div-dec"></div>
         </div>
       </div>
@@ -248,70 +281,110 @@
 
 <!-- ***** Main Banner Area End ***** -->
 <br>
-<br>
 
   <div class="container text-center">
 
         <div class="container row">
-              <div class="col-lg-6">
+              <div class="box-container col">
               <div class="credit-card-input">
-                <label for="credit-card-select">Select Credit Card</label>
+                <div class="box-header text-white">
+                  <h4 class="mb-0">Create new bill template</h4>
+              </div>
+              <hr>
+              <br>
+
+                <label for="credit-card-select">Select Biller ID</label>
                 <div class="d-flex align-items-center">
-                  <i class="fas fa-credit-card credit-card-icon"></i>
+                  <i class="fas fa-tools credit-card-icon"></i>
                   <select name="credit-card-select" id="credit-card-select" required>
-                    <option value="">Select Credit Card</option>
-                    <option value="card1">5508697905133962, 7/2030</option>
-                    <option value="card2">4024007157561266, 10/2028</option>
+                    <option value="">Select Biller ID</option>
+                    <option value="card1">Al-Kabeda for electricity (136255)</option>
+                    <option value="card2">Al-Kabeda for water (377264)</option>
+                    <option value="card2">Gas CO. (764723)</option>
+                    <option value="card2">Telecom EG (477265)</option>
+                    <!-- Add more credit card options here -->
+                  </select>
+                </div>
+                  <br>
+                  <label for="credit-card-select">Select Bill Type</label>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-pager credit-card-icon"></i>
+                  <select name="credit-card-select" id="credit-card-select" required>
+                    <option value="">Select Type</option>
+                    <option value="card1">Electricity Bill</option>
+                    <option value="card2">Water Bill</option>
+                    <option value="card2">Gas Bill</option>
+                    <option value="card2">Telephone Bill</option>
                     <!-- Add more credit card options here -->
                   </select>
                 </div>
               </div>
+
+              <div class="text-input">
+                <br>
+              <label for="credit-card-select">Payer ID</label>
+                <div class="textarea-container">
+                  <textarea class="textarea" maxlength="10" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
+                  <div class="character-count">0/10</div>
+                </div>
+                <br>
+              </div>
+
+              
+              <div class="text-input">
+                <br>
+              <label for="credit-card-select">Payer Address</label>
+                <div class="textarea-container">
+                  <textarea class="textarea" maxlength="1000" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
+                  <div class="character-count">0/1000</div>
+                </div>
+                <br>
+              </div>
+
+              <div class="text-input">
+                <br>
+              <label for="credit-card-select">Bill Amount</label>
+                <div class="textarea-container">
+                  <textarea class="textarea" maxlength="30" style="width: 90%;" oninput="updateCharacterCount(this)" id="problem"></textarea>
+                  <div class="character-count">EGP</div>
+                </div>
+                <br>
+              </div>
+
               <div class="credit-card-points">
-                <span id="credit-card-points">Points: 420</span>
-                <a href="redeemPts.html">
-                  <button id="redeem-points" class="credit-card-redeem-button text-white">Redeem Points</button>
-                </a>
-                
+                <button class="credit-card-redeem-button text-white">Save Template</button>
               </div>
           
 
               <div class="loan-input-group">
-                <div class="freeze-input">
-                  <button type="submit" id="loan-submit" class="freeze-input" onclick="submitFreeze()">Freeze</button>
-                </div>
-                <div class="freeze-input">
-                  <button type="submit"  id="loan-submit" class="freeze-input" onclick="submitUnfreeze()">Unfreeze</button>
-                </div>
-                <br>
-                <div class="freeze-input" >
-                  <button type="submit" id="loan-submit" style="background-color: red;" class="loan-button" onclick="submitTheft()">Report Theft</button>
-          </div>
+          
               </div>
 
           </div>
+          <div class="col empty-seperator">
 
-              <div class="credit-card-history col">
+          
+          </div>
+
+              <div class="box-container credit-card-history col-6" style="width: 50vw;">
                 <div class="box">
                     <div class="box-header text-white">
                         <h4 class="mb-0">Transaction History</h4>
                     </div>
-                    <br>
+                    <hr>
                     <br>
                     <div class="box-body p-0">
                         <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
-                          <div class="notification-icon bg-success text-white mr-3">
-                            <i class="fas fa-check"></i>
+                          <div class="notification-icon bg-secondary text-white mr-3">
+                            <i></i>
                           </div>
                           <div class="font-weight-bold mr-3">
-                            <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
-                            <div class="small" id="details_of_notif">You have successfully completed a transaction for $100.</div>
+                            <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
+                            <div class="small" id="details_of_notif">Payer ID: 8199937422 | 310 EGP</div>
                           </div>
-                          <span class="ml-auto mb-auto">
-                            <div class="text-right text-muted pt-1">2 hours ago</div>
-                          </span>
                         </div>
-                        <!-- Add more transaction history items here -->
-                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+
+                        <div class="p-3 d-flex align-items-center bg-primary border-bottom osahan-post-header">
                             <div class="notification-icon bg-success text-white mr-3">
                               <i class="fas fa-check"></i>
                             </div>
@@ -319,10 +392,40 @@
                               <div class="text-truncate" id="title_of_notif">Your transaction was successful</div>
                               <div class="small" id="details_of_notif">You have successfully completed a transaction for $200.</div>
                             </div>
-                            <span class="ml-auto mb-auto">
-                              <div class="text-right text-muted pt-1">3 days ago</div>
-                            </span>
                           </div>
+
+                          <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                            <div class="notification-icon bg-secondary text-white mr-3">
+                              <i></i>
+                            </div>
+                            <div class="font-weight-bold mr-3">
+                              <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
+                              <div class="small" id="details_of_notif">Payer ID: 8199937422 | 310 EGP</div>
+                            </div>
+                          </div>
+  
+
+                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                          <div class="notification-icon bg-secondary text-white mr-3">
+                            <i></i>
+                          </div>
+                          <div class="font-weight-bold mr-3">
+                            <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
+                            <div class="small" id="details_of_notif">Payer ID: 8199937422 | 310 EGP</div>
+                          </div>
+                        </div>
+
+
+                        <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                          <div class="notification-icon bg-secondary text-white mr-3">
+                            <i></i>
+                          </div>
+                          <div class="font-weight-bold mr-3">
+                            <div class="text-truncate" id="title_of_notif">Al-Kabeda for water (377264)</div>
+                            <div class="small" id="details_of_notif">Payer ID: 8199937422 | 310 EGP</div>
+                          </div>
+                        </div>
+
                     </div>
                 </div>
             
@@ -335,17 +438,17 @@
   <script>
     function submitTheft() {
       
-      return alert("Theft report submitted");
+      return confirm("Theft report submitted");
     }
 
     function submitFreeze() {
       
-      return alert("Card has been successfully frozen");
+      return confirm("Card has been successfully frozen");
     }
 
     function submitUnfreeze() {
       
-      return alert("Card has been successfully unfrozen");
+      return confirm("Card has been successfully unfrozen");
     }
   </script>
 
