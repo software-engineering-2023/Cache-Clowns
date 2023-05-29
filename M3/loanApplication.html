@@ -147,22 +147,25 @@
   <form id="loan-application" action="" method="get" onsubmit="return validateForm()">
     <div class="loan-input-group">
       <div class="loan-input">
+        <label for="loan-amm">Loan Amount</label>
+        <select name="loan-amm" id="loan-amm" required>
+          <option value="">Select Loan Amount</option>
+          <option value="personal">EGP 50,000 (interest 10% to 20%/yr)</option>
+          <option value="personal">EGP 100,000 (interest 8% to 18%/yr)</option>
+          <option value="personal">EGP 250,000 (interest 7% to 15%/yr)</option>
+          <option value="personal">EGP 500,000 (interest  6% to 12%/yr)</option>
+          <option value="personal">EGP 750,000 (interest 5% to 10%/yr)</option>
+          <option value="personal">EGP 1000,000 (interest 4% to 9%/yr)</option>
+          <!-- Add more loan types here -->
+        </select>
+      </div>
+      <div class="loan-input">
         <label for="loan-type">Loan Type</label>
         <select name="loan-type" id="loan-type" required>
           <option value="">Select Loan Type</option>
           <option value="personal">Personal Loan</option>
           <option value="car">Car Loan</option>
           <!-- Add more loan types here -->
-        </select>
-      </div>
-      <div class="loan-input">
-        <label for="interest-rate">Interest Rate</label>
-        <select name="interest-rate" id="interest-rate" required>
-          <option value="">Select Interest Rate</option>
-          <option value="3%">3%</option>
-          <option value="5%">5%</option>
-          <option value="7%">7%</option>
-          <!-- Add more interest rates here -->
         </select>
       </div>
     </div>
@@ -185,10 +188,10 @@
 <script>
   function validateForm() {
     var loanType = document.getElementById("loan-type").value;
-    var interestRate = document.getElementById("interest-rate").value;
+    var loanAmm = document.getElementById("loan-amm").value;
     var repaymentPeriod = document.getElementById("repayment-period").value;
     
-    if (loanType === "" || interestRate === "" || repaymentPeriod === "") {
+    if (loanType === "" ||  loanAmm === "" || repaymentPeriod === "") {
       alert("Please fill in all fields.");
       return false;
     }
