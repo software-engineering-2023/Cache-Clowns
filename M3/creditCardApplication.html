@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>GFB Bank</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+</head>
+
+<style>
+  .credit-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .credit-card-heading {
+    margin-bottom: 30px;
+  }
+
+  .credit-card-input {
+    margin-bottom: 20px;
+  }
+
+  .credit-card-input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .credit-card-input select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .credit-card-input button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .credit-card-input button:hover {
+    background-color: darkorange;
+  }
+</style>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+   <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/GFB_white.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+
+                      <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#services">Services</a></li>
+                        <li class="scroll-to-section"><a href="#aboutus">About</a></li>
+                        <li><a href="login.html">Sign in</a></li> 
+
+                        <!-- old
+                        <li class="scroll-to-section"><a href="index.html">Home</a></li>
+                        <li class="scroll-to-section"><a href="index.html">Services</a></li>
+                        <li class="scroll-to-section"><a href="index.html">About</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="our-services.html">Our Services</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="index.html">Testimonials</a></li>
+                        <li><a href="contact-us.html">Contact Support</a></li> -->
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<div class="page-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header-text">
+          <h2>Credit Card Application</h2>
+          <div class="div-dec"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ***** Main Banner Area End ***** -->
+
+  <div class="credit-card-container">
+    <form id="credit-card-application" action="" method="get" onsubmit="return validateForm()">
+      <div class="credit-card-input">
+        <label for="spending-limit">Account Number</label>
+        <select name="spending-limit" id="spending-limit" required>
+          <option value="">Select Account Number</option>
+          <option value="12345678901234">1005678901234</option>
+          <option value="1090678901234">1090678901234</option>
+          <!-- Add more spending limits here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <label for="spending-limit">Monthly Spending Limit</label>
+        <select name="spending-limit" id="spending-limit" required>
+          <option value="">Select Spending Limit</option>
+          <option value="1000">EGP 10,000</option>
+          <option value="2000">EGP 50,000</option>
+          <option value="5000">EGP 200,000 </option>
+          <!-- Add more spending limits here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <label for="interest-rate">Interest Rate</label>
+        <select name="interest-rate" id="interest-rate" required>
+          <option value="">Select Interest Rate</option>
+          <option value="15%">15%</option>
+          <option value="18%">18%</option>
+          <option value="20%">20%</option>
+          <!-- Add more interest rates here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <label for="repayment-period">Repayment Period</label>
+        <select name="repayment-period" id="repayment-period" required>
+          <option value="">Select Repayment Period</option>
+          <option value="1 year">1 Month</option>
+          <option value="2 years">2 Months</option>
+          <option value="3 years">3 Months</option>
+          <!-- Add more repayment periods here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <button type="submit" id="credit-card-submit" class="credit-card-button">Submit Application</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var spendingLimit = document.getElementById("spending-limit").value;
+      var interestRate = document.getElementById("interest-rate").value;
+      var repaymentPeriod = document.getElementById("repayment-period").value;
+
+      if (spendingLimit === "" || interestRate === "" || repaymentPeriod === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      return confirm("Submitted");
+    }
+  </script>
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 German Funding Bank, Ltd. All Rights Reserved. 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
