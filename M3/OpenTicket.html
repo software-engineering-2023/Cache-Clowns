@@ -81,13 +81,15 @@
         }
 
 
-      /*.container {
+        /*
+      .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
       }
+      */
       
       .textarea-container {
         position: relative;
@@ -189,45 +191,58 @@
 
 <div class="loan-container">
     
-    <form id="loan-application" action="" method="get">
-      <div class="loan-input-group">
-        <div class="loan-input">
-        </div>
-      </div>
-      
-     <div class="loan-input">
-        <label for="repayment-period">What seems to be the problem?</label>
-        <select name="repayment-period" id="repayment-period" required>
-          <option value="">Select issue</option>
-          <option value="1 year">Login/registeration issues</option>
-          <option value="3 years">Other technical difficulties</option>
-          <option value="5 years">Card issues</option>
-          <option value="5 years">Billing issues</option>
-          <option value="5 years">Transaction issues</option>
-        </select>
-      </div> 
-
+  <form id="loan-application" action="" method="get">
+    <div class="loan-input-group">
       <div class="loan-input">
-          <div class="textarea-container">
-            <textarea class="textarea" maxlength="1000" oninput="updateCharacterCount(this)"></textarea>
-            <div class="character-count">0/1000</div>
-          </div>
-          <button class="button">Submit</button>
-        </div>
-        <button class="button" onclick="window.location.href='TicketHistory.html';">View past tickets</button>
       </div>
-        </div>
-        
-        <script>
-        function updateCharacterCount(textarea) {
-          const characterCount = textarea.value.length;
-          const characterCountElement = textarea.nextElementSibling;
-          characterCountElement.textContent = characterCount + "/1000";
-        }
-        </script>
-        
-    </form>
+    </div>
+    
+    <div class="loan-input">
+      <label for="repayment-period">What seems to be the problem?</label>
+      <select name="repayment-period" id="issue" required>
+        <option value="">Select issue</option>
+        <option value="1 year">Login/registeration issues</option>
+        <option value="3 years">Other technical difficulties</option>
+        <option value="5 years">Card issues</option>
+        <option value="5 years">Billing issues</option>
+        <option value="5 years">Transaction issues</option>
+      </select>
+    </div> 
+    
+  
+    <div class="loan-input">
+      <div class="textarea-container">
+        <textarea class="textarea" maxlength="1000" oninput="updateCharacterCount(this)" id="problem"></textarea>
+        <div class="character-count">0/1000</div>
+      </div>
+      <br></br>
+      <button class="button" onclick="submitForm()">Submit</button>
+    </div>
+    <button class="button" onclick="window.location.href='TicketHistory.html';">View past tickets</button>
+  </form>
+  
+  
+  
   </div>
+  <script>
+    function updateCharacterCount(textarea) {
+      const characterCount = textarea.value.length;
+      const characterCountElement = textarea.nextElementSibling;
+      characterCountElement.textContent = characterCount + "/1000";
+    }
+    
+    function submitForm() {
+      const issue = document.getElementById("issue").value;
+      const problem = document.getElementById("problem").value;
+      
+      if (issue && problem) {
+        return confirm("Submitted");
+      } else {
+        // Handle the case when not all fields are filled
+        alert("Please fill in all fields");
+      }
+    }
+    </script>
 
 
   <footer>
