@@ -63,12 +63,92 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
+    }
 
     .container{
-      width: 180%;
+      width: 60vw;
+      align-content: center;
+      margin-left: 30px;
+    }
+
+    .header-container{
+      width: 100%;
+      align-content: center;
+      margin-left: 10px;
+      margin-right: 20%;
+    }
+
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .chat-container {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
       align-self: flex-end;
-      margin-left: 20%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .chatbox {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .message .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .message .text {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 70%;
+    }
+
+    .message .text p {
+      margin: 0;
+    }
+
+    .message .text.sent {
+      background-color: #DCF8C6;
+      align-self: flex-end;
+    }
+
+    .message .text.received {
+      background-color: #E8E8E8;
+      align-self: flex-start;
+    }
+
+    .message .time {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .align-left {
+      align-self: flex-start;
+    }
+
+    .align-right {
+      align-self: flex-end;
+      text-align: left;
     }
   </style>
 
@@ -80,25 +160,40 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/GFB_white.png" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                    <img src="assets/images/GFB_white.png" alt="">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
 
-                      <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="#services">Services</a></li>
-                        <li class="scroll-to-section"><a href="#aboutus">About</a></li>
-                        <li><a href="login.html">Sign in</a></li> 
-                    </ul>        
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+                  <li class="scroll-to-section align-left"><a href="index.html" class="active">Home</a></li>
+                    <li class="scroll-to-section"><a href="#services">Services</a></li>
+                    <li class="scroll-to-section"><a href="#aboutus">About</a></li>
+                    <li><a href="login.html">Sign in</a></li> 
+
+                    <!-- old
+                    <li class="scroll-to-section"><a href="index.html">Home</a></li>
+                    <li class="scroll-to-section"><a href="index.html">Services</a></li>
+                    <li class="scroll-to-section"><a href="index.html">About</a></li>
+                    <li class="has-sub">
+                        <a href="javascript:void(0)">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="our-services.html">Our Services</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="scroll-to-section"><a href="index.html">Testimonials</a></li>
+                    <li><a href="contact-us.html">Contact Support</a></li> -->
+                </ul>        
+                <a class='menu-trigger'>
+                    <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+            </nav>
             </div>
         </div>
     </div>
@@ -110,7 +205,7 @@
       <div class="page-heading">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 align-self-center">
               <div class="header-text">
                 <h2>View your past tickets</h2>
                 <div class="div-dec"></div>
@@ -126,14 +221,15 @@
 
   <!-- the notifs start here-->
   
-
+<br>
   <div class="container">
     <div class="row">
-          <div class="col">
+          <div class="col-6">
             <div class="box">
               <div class="box-header text-Black">
                   <h4 class="mb-0">Ticket history</h4>
               </div>
+              <br>
               <div class="box-body p-0">
 
                   <div class="p-3 d-flex bg-light border-bottom osahan-post-header">
@@ -160,7 +256,7 @@
                     </span>
                   </div>
 
-                <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                <div class="p-3 d-flex align-items-center bg-success border-bottom osahan-post-header">
                   <div class="notification-icon bg-warning text-white mr-3">
                       <i class="fas fa-exclamation-circle"></i>
                   </div>
@@ -168,7 +264,7 @@
                       <div class="mb-2">Ticket 218827: Issue with Card</div>
                   </div>
                   <span class="ml-auto mb-auto">
-                      <div class="text-right text-muted pt-1">10 days ago</div>
+                      <div class="text-righttext-white pt-1">10 days ago</div>
                   </span>
                 </div>
 
@@ -207,11 +303,54 @@
 
             </div>
         </div>
-
-        <div id="content" class="col">
-        </div>
-
+        <br>
+        <br>
+        <br>
+        <div class="col-6">
+          <div class="container">
+            <div class="chat-container">
+              <div class="title">Ticket 218827: Issue with Card</div>
+              <div class="chatbox">
+                <div class="message align-left">
+                  <img class="profile-pic" src="assets/images/User.png" alt="User 1 Profile Picture">
+                  <div class="text sent">
+                    <p>I have a problem with my card, it does not allow me to make transactions</p>
+                    <span class="time">12:30 PM</span>
+                  </div>
+                </div>
+                <br>
+                <div class="message align-right">
+                  <div class="text received">
+                    <p>freeze and unfreeze it</p>
+                    <span class="time">12:35 PM</span>
+                  </div>
+                  <img class="profile-pic" src="assets/images/User 2.png" alt="User 2 Profile Picture">
+                </div>
+                <br>
+                <div class="message align-left">
+                  <img class="profile-pic" src="assets/images/User.png" alt="User 1 Profile Picture">
+                  <div class="text sent">
+                    <p>Thanks, that worked!</p>
+                    <span class="time">12:40 PM</span>
+                  </div>
+                </div>
+                <br>
+                <div class="message align-right">
+                  <div class="text received">
+                    <p>You are welcome.</p>
+                    <span class="time">12:45 PM</span>
+                  </div>
+                  <img class="profile-pic" src="assets/images/User 2.png" alt="User 2 Profile Picture">
+                </div>
+                <!-- Add more messages here -->
+              </div>
+            </div>
+          </div>
+        </div> 
     </div>
+    
+
+
   </div>
 
 
