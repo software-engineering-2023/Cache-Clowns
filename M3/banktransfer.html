@@ -147,17 +147,28 @@
       </div>
       <div class="credit-card-input">
         <label for="sender-account-number">Sender Account Number</label>
-        <input type="number" name="sender-account-number" id="sender-account-number" required>
-      </div>
-      <div class="credit-card-input">
-        <label for="receiver-account-number">Receiver Account Number</label>
         <select name="receiver-account-number" id="receiver-account-number" required>
-          <option value="">Select Receiver Account Number</option>
+          <option value="">Select Sender Account Number</option>
           <option value="1234567890">1234567890</option>
           <option value="9876543210">9876543210</option>
           <!-- Add more receiver account numbers here -->
         </select>
       </div>
+      <div class="credit-card-input">
+        <label for="currency">Currency</label>
+        <select name="currency" id="currency" required>
+          <option value="">Select Currency</option>
+          <option value="usd">EGP</option>
+          <option value="eur">USD</option>
+          <option value="egp">EUR</option>
+          <!-- Add more receiver account numbers here -->
+        </select>
+      </div>
+      <div class="credit-card-input">
+        <label for="receiver-account-number">Receiver Account Number</label>
+        <input type="number" name="sender-account-number" id="sender-account-number" required>
+      </div>
+      
       <div class="credit-card-input">
         <label for="iban">IBAN</label>
         <input type="text" name="iban" id="iban" required>
@@ -175,7 +186,52 @@
       <button type="submit" id="loan-submit" class="loan-button" onclick="return validateForm()">Submit Application</button>
     </div>
   </form>
+  <br></br>
+  <div class="container">
+    <h3>Transfer History</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Transfer ID</th>
+          <th>Transfer Type</th>
+          <th>Receiver Account</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Transaction Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>24324</td>
+          <td>International</td>
+          <td>94252352532</td>
+          <td>$500</td>
+          <td>Pending</td>
+          <td>3/12/2023</td>
+        </tr>
+        <tr>
+          <td>24324</td>
+          <td>Domestic</td>
+          <td>25667352532</td>
+          <td>EGP 1200</td>
+          <td>Failed</td>
+          <td>9/02/2023</td>
+        </tr>
+        <tr>
+          <td>412431</td>
+          <td>Local</td>
+          <td>34252352532</td>
+          <td>EGP 10,000</td>
+          <td>Successful</td>
+          <td>10/01/2023</td>
+        </tr>
+        <!-- Add more rows for each loan history entry -->
+      </tbody>
+    </table>
 </div>
+</div>
+
+
   
   <script>
     function validateForm() {
@@ -185,8 +241,9 @@
       var iban = document.getElementById("iban").value;
       var amount = document.getElementById("amount").value;
       var datee = document.getElementById("date").value;
+      var currency = document.getElementById("currency").value;
   
-      if (type === "" || senderAccountNumber === "" || receiverAccountNumber === "" || iban === "" || amount === "" || datee == "") {
+      if (type === "" || senderAccountNumber === "" || receiverAccountNumber === "" || iban === "" || amount === "" || datee == "" || currency == "") {
         alert("Please fill in all fields.");
         return false;
       }
