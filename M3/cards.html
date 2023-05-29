@@ -139,6 +139,21 @@
           background-color: darkred;
       }
 
+      .freeze-input button {
+            padding: 10px 20px;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 20px;
+      }
+
+      .freeze-input button:hover {
+          background-color: darkorange;
+      }
+
       .loan-container {
             
             display: flex;
@@ -148,8 +163,18 @@
             text-align: center;
             background-color: rgba(255, 255, 255, 255);
             padding: 30px;
-            border-radius: 10px;
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+            border-radius: 10px;          
+              /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+        }
+
+
+        .loan-input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .loan-input-group .loan-input {
+            width: calc(50% - 10px);
         }
 
   </style>
@@ -268,13 +293,43 @@
         </div>
      
     </div>
+
+    <div class="loan-input-group">
+      <div class="freeze-input">
+        <button type="submit" id="loan-submit" class="freeze-input" onclick="submitFreeze()">Freeze</button>
+      </div>
+      <div class="freeze-input">
+        <button type="submit" id="loan-submit" class="freeze-input" onclick="submitUnfreeze()">Unfreeze</button>
+      </div>
+    </div>
   </div>
+
+  
 
   <div class="loan-container">
     <div class="loan-input" >
-      <a href="creditCardApplication.html"><button type="submit" id="loan-submit" class="loan-button">Report Theft</button></a>
+      
+        <button type="submit" id="loan-submit" class="loan-button" onclick="submitTheft()">Report Theft</button>
+    
     </div>
   </div>
+
+  <script>
+    function submitTheft() {
+      
+      return confirm("Theft report submitted");
+    }
+
+    function submitFreeze() {
+      
+      return confirm("Card has been successfully frozen");
+    }
+
+    function submitUnfreeze() {
+      
+      return confirm("Card has been successfully unfrozen");
+    }
+  </script>
 
 
   <footer>
