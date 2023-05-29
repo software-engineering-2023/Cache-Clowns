@@ -1,0 +1,682 @@
+/** Inspired by: http://graphicburger.com/flat-design-ui-components/ **/
+/** Line-chart and donut-chart made by @kseso https://codepen.io/Kseso/pen/phiyL **/
+
+
+/************************************ FONTS ************************************/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+@font-face {
+	font-family: 'icomoon';
+	src:url('https://jlalovi-cv.herokuapp.com/font/icomoon.eot');
+	src:url('https://jlalovi-cv.herokuapp.com/font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('https://jlalovi-cv.herokuapp.com/font/icomoon.ttf') format('truetype'),
+		url('https://jlalovi-cv.herokuapp.com/font/icomoon.woff') format('woff'),
+		url('https://jlalovi-cv.herokuapp.com/font/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-cloudy:before {
+	content: "\e60f";
+}
+.icon-sun:before {
+	content: "\e610";
+}
+.icon-cloudy2:before {
+	content: "\e611";
+}
+/************************************* END FONTS *************************************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+
+body {
+	background: linear-gradient(-45deg,#fff,#e28d2b, #4e402e, #1b1814);
+    background-size: cover;
+    animation: gradient 15s ease infinite;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+h1 {
+	font-size: 23px;
+}
+
+h2 {
+	font-size: 17px;
+}
+
+p {
+	font-size: 15px;
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+}
+	a:hover {
+		text-decoration: underline;
+	}
+.li {
+    margin: 0;
+}
+
+h1, h2, p, a, span{
+	color: #fff;
+}
+	.scnd-font-color {
+		color: #9099b7;
+	}
+
+.input-container {
+	position: relative;
+}
+	input[type=text]{
+		width: 260px;
+		height: 50px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		padding-left: 45px;
+		background: #50597b;
+		color: #fff;
+		border: solid 1px #1f253d;
+		border-radius: 5px;		
+	}
+		input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+	   		color: #fff;	   		
+	   	}
+		input[type=text]:-moz-input-placeholder { /* Mozilla Firefox 4 to 18 */
+	   		color: #fff;	   
+	   	}
+		input[type=text]::-moz-input-placeholder { /* Mozilla Firefox 19+ */
+	   		color: #fff;
+	   	}
+		input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   		color: #fff;	   	
+	   	}
+	   	input[type=text]:focus {
+	   		outline: none; /* removes the default orange border when focus */
+	   		border: 1px solid #11a8ab;
+	   	}
+	.input-icon {
+		font-size: 22px;
+		position: absolute;
+		left: 31px;
+		top: 10px;
+	}
+		.input-icon.password-icon {
+			left: 35px;
+		}
+
+.horizontal-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal-list li {
+		float: left;
+	}
+
+.clear {
+	clear: both;
+}
+
+.icon {
+	font-size: 25px;
+}
+
+.titular {
+	display: block;
+	line-height: 60px;
+	margin: 0;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.button {
+	display: block;
+	width: 175px;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 5px;
+	-webkit-transition: background .3s;
+	transition: background .3s;
+}
+	.button:hover {
+		text-decoration: none;
+	}
+
+.arrow-btn-container {
+	position: relative;
+}
+	.arrow-btn {
+		position: absolute;
+		display: block;
+		width: 60px;
+		height: 60px;
+		-webkit-transition: background .3s;
+		transition: background .3s;
+	}
+		.arrow-btn:hover {
+			text-decoration: none;
+		}
+		.arrow-btn.left {
+			border-top-left-radius: 5px;
+		}
+		.arrow-btn.right {
+			border-top-right-radius: 5px;
+			right: 0;
+			top: 0;
+		}
+		.arrow-btn .icon {
+			display: block;
+			font-size: 18px;
+			border: 2px solid #fff;
+			border-radius: 100%;
+			line-height: 17px;
+			width: 21px;
+			margin: 20px auto;
+			text-align: center;
+		}
+			.arrow-btn.left .icon {
+				padding-right: 2px;
+			}
+
+.profile-picture {
+	border-radius: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: content-box;
+  	-moz-box-sizing: content-box;
+  	box-sizing: content-box;	
+}
+	.big-profile-picture {
+		margin: 0 auto;		
+		border: 5px solid #50597b;
+		width: 150px;
+		height: 150px;
+	}
+	.small-profile-picture {
+		border: 2px solid #50597b;
+		width: 40px;
+		height: 40px;
+	}
+
+
+/** MAIN CONTAINER **/
+
+.main-container {
+	font-family: 'Ubuntu', sans-serif;
+	width: 950px;
+	height: 800px;
+	margin: 6em auto;
+}	
+
+	/** CONTAINERS **/
+	.container {
+		float: left;
+		width: 300px;
+	}
+		.block {
+			margin-bottom: 25px;
+			background: #394264;
+			border-radius: 5px;
+		}
+		/******************************************** LEFT CONTAINER *****************************************/
+		.left-container {}
+			.menu-box {
+				height: 360px;
+			}
+				.menu-box .titular {
+					background: #777;
+				}
+				.menu-box-menu .icon {
+					display: inline-block;
+					vertical-align: top;
+					width: 28px;
+					margin-left: 20px;
+					margin-right: 15px;
+				}
+				.menu-box-number {
+					width: 36px;
+					line-height: 22px;
+					background: #50597b;
+					text-align: center;
+					border-radius: 15px;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					-webkit-transition: all .3s;
+					transition: all .3s;
+				}
+				.menu-box-menu li{
+					height: 60px;
+					position: relative;										
+				}
+				.menu-box-tab {
+					line-height: 60px;
+					display: block;
+					border-bottom: 1px solid #10121d;
+					transition: .2s;
+				}
+					.menu-box-tab:hover {
+						background: #50597b;
+						border-top: 1px solid #1f253d;
+						text-decoration: none;
+					}
+					.menu-box-tab:hover .icon {
+						color: #fff;
+					}
+					.menu-box-tab:hover .menu-box-number {
+						background: #fcb150;
+					}
+			.donut-chart-block {
+				height: 434px;
+			}
+				.donut-chart-block .titular {
+					padding: 10px 0;
+				}
+				.donut-chart {
+					height: 270px;
+				}
+				/******************************************
+				DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+					.donut-chart {
+					  position: relative;
+						width: 200px;
+					  height: 200px;
+						margin: 0 auto 2rem;
+						border-radius: 100%
+					 }
+					p.center-date {
+					  background: #394264;
+					  position: absolute;
+					  text-align: center;
+						font-size: 28px;
+					  top:0;left:0;bottom:0;right:0;
+					  width: 130px;
+					  height: 130px;
+					  margin: auto;
+					  border-radius: 50%;
+					  line-height: 35px;
+					  padding: 15% 0 0;
+					}
+					.center-date span.scnd-font-color {
+					 line-height: 0; 
+					}
+					.recorte {
+					    border-radius: 50%;
+					    clip: rect(0px, 200px, 200px, 100px);
+					    height: 100%;
+					    position: absolute;
+					    width: 100%;
+					  }
+					.quesito {
+					    border-radius: 50%;
+					    clip: rect(0px, 100px, 200px, 0px);
+					    height: 100%;
+					    position: absolute;
+					    width: 100%;
+					    font-family: monospace;
+					    font-size: 1.5rem;
+					  }
+					#porcion1 {
+					    -webkit-transform: rotate(0deg);
+					    transform: rotate(0deg);
+					  }
+
+					#porcion1 .quesito {
+					    background-color: #fcb150;
+					    -webkit-transform: rotate(76deg);
+					    transform: rotate(76deg);
+					  }
+					#porcion2 {
+					    -webkit-transform: rotate(76deg);
+					    transform: rotate(76deg);
+					  }
+					#porcion2 .quesito {
+					    background-color: #777;
+					    -webkit-transform: rotate(140deg);
+					    transform: rotate(140deg);
+					  }
+					#porcion3 {
+					    -webkit-transform: rotate(215deg);
+					    transform: rotate(215deg);
+					  }
+					#porcion3 .quesito {
+					    background-color: #777;
+					    -webkit-transform: rotate(113deg);
+					    transform: rotate(113deg);
+					  }
+					#porcionFin {
+					    -webkit-transform: rotate(-32deg);
+					    transform:rotate(-32deg);
+					  }
+					#porcionFin .quesito {
+					    background-color: #FCB150;
+					    -webkit-transform: rotate(32deg);
+					    transform: rotate(32deg);
+					  }
+				/******************************************
+				END DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+			.line-chart-block {
+				height: 400px;
+			}
+				.line-chart {
+					height: 200px;
+					background: #e2a14c;
+				}
+        /******************************************
+				LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+				.grafico {
+				  padding: 2rem 1rem 1rem;
+				  width: 100%;
+				  height: 100%;
+				  position: relative;
+				  color: #fff;
+				  font-size: 80%;
+				}
+				.grafico span {
+				  display: block;
+				  position: absolute;
+				  bottom: 3rem;
+				  left: 2rem;
+				  height: 0;
+				  border-top: 2px solid;
+				  -webkit-transform-origin: left center;
+				  transform-origin: left center;
+				}
+				.grafico span > span {
+				  left: 100%; bottom: 0;
+				}
+				[data-valor='25'] {width: 75px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+				[data-valor='8'] {width: 24px; -webkit-transform: rotate(65deg); transform: rotate(65deg);}
+				[data-valor='13'] {width: 39px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+				[data-valor='5'] {width: 15px; -webkit-transform: rotate(50deg); transform: rotate(50deg);}
+				[data-valor='23'] {width: 69px; -webkit-transform: rotate(-70deg); transform: rotate(-70deg);}
+				[data-valor='12'] {width: 36px; -webkit-transform: rotate(75deg); transform: rotate(75deg);}
+				[data-valor='15'] {width: 45px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+
+				[data-valor]:before {
+				  content: '';
+				  position: absolute;
+				  display: block;
+				  right: -4px;
+				  bottom: -3px;
+				  padding: 4px;
+				  background: #fff;
+				  border-radius: 50%;
+				}
+				[data-valor='23']:after {
+				  content: '+' attr(data-valor) '%';
+				  position: absolute;
+				  right: -2.7rem;
+				  top: -1.7rem;
+				  padding: .3rem .5rem;
+				  background: #50597B;
+				  border-radius: .5rem;
+				  -webkit-transform: rotate(45deg);
+				  transform: rotate(45deg);  
+				}
+				[class^='eje-'] {
+				  position: absolute;
+				  left: 0;
+				  bottom: 0rem;
+				  width: 100%;
+				  padding: 1rem 1rem 0 2rem;
+				  height: 80%;
+				}
+				.eje-x {
+				  height: 2.5rem;
+				}
+				.eje-y li {
+				  height: 25%;
+				  border-top: 1px solid #777;
+				}
+				[data-ejeY]:before {
+				  content: attr(data-ejeY);
+				  display: inline-block;
+				  width: 2rem;
+				  text-align: right;
+				  line-height: 0;
+				  position: relative;
+				  left: -2.5rem;
+				  top: -.5rem;
+				} 
+				.eje-x li {
+				  width: 33%;
+				  float: left;
+				  text-align: center;
+				}
+				/******************************************
+				END LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+				.time-lenght {
+					padding-top: 22px;
+					padding-left: 38px;
+				}
+					.time-lenght-btn {
+						display: block;
+						width: 70px;
+						line-height: 32px;
+						background: #50597b;
+						border-radius: 5px;
+						font-size: 14px;
+						text-align: center;
+						margin-right: 5px;
+						-webkit-transition: .3s;
+						transition: .3s;
+					}
+						.time-lenght-btn:hover {
+							text-decoration: none;
+							background: #FCB150;
+						}
+				.month-data {
+					padding-top: 28px;
+				}
+					.month-data p {
+						display: inline-block;
+						margin: 0;
+						padding: 0 25px 15px;            
+						font-size: 16px;
+					}
+						.month-data p:last-child {
+							padding: 0 25px;
+              float: right;
+							font-size: 15px;
+						}
+						.increment {
+							color: #e64c65;
+						}
+
+		/************************************************** MIDDLE CONTAINER **********************************/
+		.middle-container {
+			margin: 0 25px;	
+            border-color: #FCB150;		
+		}
+			.profile {
+				height: 410px;
+                border-color: #FCB150;
+			}
+				.add-button .icon {
+					float: right;
+					line-height: 18px;
+					width: 23px;					
+					border: 2px solid;
+					border-radius: 100%;
+					font-size: 18px;
+					text-align: center;
+					margin: 10px;					
+				}
+					.add-button .icon:hover {
+						color: #FCB150;
+						border-color: #FCB150;
+					}
+				.user-name {
+					margin: 25px 0 16px;
+					text-align: center;
+				}
+				.profile-description {
+					width: 210px;
+					margin: 0 auto;
+					text-align: center;
+				}
+				.profile-options {
+					padding-top: 23px;
+				}
+					.profile-options li {
+						border-left: 1px solid #1f253d;
+					}
+						.profile-options p {
+							margin: 0;
+						}
+						.profile-options a {
+							display: block;					
+							width: 99px;
+							line-height: 60px;
+							text-align: center;
+							-webkit-transition: background .3s;
+							transition: background .3s;				
+						}
+							.profile-options a:hover {
+								text-decoration: none;
+								background: #50597b;
+							}
+							.profile-options a:hover.comments .icon {
+								color: #fcb150;
+							}
+							.profile-options a:hover.views .icon {
+								color: #11a8ab;
+							}
+							.profile-options a:hover.likes .icon {
+								color: #e64c65;
+							}
+							.profile-options .icon {
+								padding-right: 10px;
+							}
+							.profile-options .comments {
+								border-top: 4px solid #fcb150;
+							}
+							.profile-options .views {
+								border-top: 4px solid #11a8ab;
+							}
+							.profile-options .likes {
+								border-top: 4px solid #e64c65;
+							}
+			
+			.middle-container 
+				.middle-container .social .icon {
+					float: left;
+					width: 60px;
+					height: 60px;
+					text-align: center;
+					font-size: 20px;
+					border-bottom-left-radius: 5px;
+					border-top-left-radius: 5px;
+				}
+                .middle-container .social .icon:hover {
+                    border: #e2a14c;
+                }
+		/********************************************* RIGHT CONTAINER ****************************************/
+		.right-container {}
+			.join-newsletter {
+				height: 230px;
+			}
+				.join-newsletter .titular {
+					padding-top: 10px;
+				}
+				.subscribe.button {
+					background: #50597b;
+					margin-top: 10px;
+				}
+					.subscribe.button:hover {
+						background: #FCB150;
+					}
+			.account {
+				height: 390px;
+			}
+				.account .titular {
+					padding: 10px 0;
+				}
+				.sign-in.button {
+					background: #e64c65;
+					margin: 10px auto;
+				}
+					.sign-in.button:hover {
+						background: #cc324b;
+					}
+				.account p { 
+					text-align: center;
+				}
+			.calendar-day {
+				height: 320px;
+				background: #1f253d;
+			}
+				.calendar-day .titular {
+					background: #777;
+				}
+					.calendar-day .arrow-btn:hover {
+						background: #fcb150;
+					}
+				.calendar-day .the-day {
+					margin: 0;
+					text-align: center;
+					font-size: 146px;
+				}
+				.add-event.button {
+					background: #777;
+				}
+					.add-event.button:hover {
+						background: #fcb150;
+					}
+		
+                    @keyframes gradient {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
