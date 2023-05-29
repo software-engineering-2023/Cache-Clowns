@@ -156,23 +156,16 @@
         backBtn.addEventListener("click", function() {
         window.location.href = "../bankaccountavailable.html";
         });
-        const acceptBtn = document.getElementById("accept-btn");
-        const rejectBtn = document.getElementById("reject-btn");
+        const clostBtn = document.getElementById("close-btn");
         const popupMessage = document.getElementById("confirm-message");
         const confirmMessage = document.getElementById("message");
         const messageType = document.getElementById("message-type");
         const cancelBtn = document.getElementById("cancel-btn");
         const confirmBtn = document.getElementById("confirm-btn");
-        acceptBtn.addEventListener("click", function() {
+        clostBtn.addEventListener("click", function() {
             popupMessage.classList.remove("hidden");
-            confirmMessage.textContent = "Please click on the confirmation button, if you want to accept the loan application.";
-            messageType.textContent = "Confirm Acception";
-        });
-        rejectBtn.addEventListener("click", function(){
-            popupMessage.classList.remove("hidden");
-            confirmMessage.textContent = "Please click on the confirmation button, if you want to reject the loan application.";
-            messageType.textContent = "Confirm Rejection";
-            
+            confirmMessage.textContent = "Please click on the confirmation button, if you want to close the bank account.";
+            messageType.textContent = "Confirm Closing The Bank Account";
         });
         cancelBtn.addEventListener("click", function(){
             popupMessage.classList.add("hidden");
