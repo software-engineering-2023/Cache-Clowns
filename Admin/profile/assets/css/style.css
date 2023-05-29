@@ -1,0 +1,128 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.head {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  
+}
+
+#header a {
+  color: #ffc451;
+  text-decoration: none;
+}
+
+
+
+#header a:hover {
+  color: #ffd584;
+  text-decoration: none;
+}
+
+#header h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#header .logo {
+  margin-right: auto !important;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  size: 1000px;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo a span {
+  color: #ffc451;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.get-started-btn {
+  color: #000;
+  border-radius: 4px;
+  padding: 7px 25px 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border: 2px solid #ffc451;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  margin-left: 95px;
+  margin-right: 90px;
+}
+
+.home-btn {
+  color: #000;
+  border-radius: 4px;
+  padding: 7px 25px 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border: 2px solid #ffc451;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 82px;
+  margin-right: 90px;
+}
+
+.home-btn:hover {
+  background: #ffbb38;
+  color: #343a40;
+}
+
+.get-started-btn:hover {
+  background: #ffbb38;
+  color: #343a40;
+}
+
+.ri-arrow-left-line {
+  margin-left: 10px;
+}
+
+.ri-arrow-right-line {
+  margin-left: 30px;
+}
